@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f5ee">
+  <title>Campus Found | Lost & Found</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <svg class="icon-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 1.8 7.2L21 11l-7.2 1.8L12 20l-1.8-7.2L3 11l7.2-1.8L12 2Z"/><path d="m19 15 .8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z"/></symbol>
+    <symbol id="i-archive" viewBox="0 0 24 24"><path d="M4 7h16v14H4zM3 3h18v4H3zM9 12h6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4m-4 4 4-4 4 4"/><path d="M4 16v4h16v-4"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 8a3 3 0 0 1 6 0"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  </svg>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Campus Found home">
+        <span class="brand-mark"><svg><use href="#i-spark"/></svg></span>
+        <span class="brand-name">campus<span>found</span></span>
+      </a>
+      <div class="campus-select"><span class="campus-dot"></span><span>North Campus</span><svg><use href="#i-arrow"/></svg></div>
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <button class="nav-link active" data-page="feed"><svg><use href="#i-grid"/></svg><span>Browse items</span><span class="nav-count" id="nav-open-count">—</span></button>
+        <button class="nav-link" data-page="matches"><svg><use href="#i-spark"/></svg><span>Smart matches</span><span class="nav-dot"></span></button>
+        <button class="nav-link" data-page="activity"><svg><use href="#i-clock"/></svg><span>My activity</span></button>
+      </nav>
+      <p class="nav-label nav-label-spaced">MANAGE</p>
+      <nav class="primary-nav" aria-label="Management">
+        <button class="nav-link" data-page="admin"><svg><use href="#i-shield"/></svg><span>Admin review</span><span class="admin-badge">STAFF</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-spark"><svg><use href="#i-spark"/></svg></span><p>Found something?<br><strong>Be someone's good day.</strong></p><button class="text-button" id="sidebar-report">Make a report <svg><use href="#i-arrow"/></svg></button></div>
+        <div class="profile-row"><div class="avatar">CF</div><div class="profile-info"><strong>Campus community</strong><span>Student access</span></div><button class="profile-menu" aria-label="Profile menu">···</button></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>North Campus</span><span class="crumb-slash">/</span><strong id="breadcrumb-current">Browse items</strong></div>
+        <div class="topbar-actions"><span class="live-indicator"><i></i> Live campus board</span><button class="icon-button mobile-menu" id="mobile-menu" aria-label="Open menu"><span></span><span></span></button><button class="report-button" id="top-report"><svg><use href="#i-plus"/></svg><span>Report an item</span></button></div>
+      </header>
+
+      <div class="page-content">
+        <section class="page-heading">
+          <div><p class="eyebrow"><span class="eyebrow-line"></span> LOST & FOUND, TOGETHER</p><h1 id="page-title">Things find their way <em>back.</em></h1><p class="heading-copy" id="page-description">One campus, one shared board. Let's get your things home.</p></div>
+          <div class="heading-date"><span class="date-icon"><svg><use href="#i-clock"/></svg></span><span><strong id="today-label">Today</strong><small>North Campus</small></span></div>
+        </section>
+
+        <section class="stats-row" aria-label="Campus item statistics">
+          <article class="stat-cell"><span class="stat-label">OPEN REPORTS</span><div class="stat-main"><strong id="stat-open">—</strong><span class="stat-symbol stat-symbol-dark"><svg><use href="#i-archive"/></svg></span></div><span class="stat-foot">Items looking for a way home</span></article>
+          <article class="stat-cell"><span class="stat-label">FOUND ITEMS</span><div class="stat-main"><strong id="stat-found">—</strong><span class="stat-symbol stat-symbol-lime"><svg><use href="#i-bag"/></svg></span></div><span class="stat-foot">New things, safely waiting</span></article>
+          <article class="stat-cell"><span class="stat-label">HAPPY RETURNS</span><div class="stat-main"><strong id="stat-resolved">—</strong><span class="stat-symbol stat-symbol-coral"><svg><use href="#i-check"/></svg></span></div><span class="stat-foot">Reunions since the board began</span></article>
+          <article class="stat-cell stat-note"><div class="note-top"><span class="note-live"><i></i> CAMPUS PULSE</span><span class="note-stamp">NO. 01</span></div><p>Every small detail<br>makes a <strong>better match.</strong></p><span class="note-decoration">✳</span></article>
+        </section>
+
+        <section class="board-section" id="feed-page">
+          <div class="activity-search-panel hidden" id="activity-search-panel"><p class="section-kicker">LOOK UP YOUR ACTIVITY</p><form id="activity-form"><label for="activity-email">College email</label><input id="activity-email" name="email" type="email" required placeholder="you@college.edu"><button type="submit">Find my activity</button></form><p id="activity-summary">Use the email address on your report or claim.</p></div>
+          <div class="board-heading"><div><p class="section-kicker">THE COMMUNITY BOARD</p><h2 id="board-title">Recently reported</h2></div><button class="view-toggle" id="view-toggle" aria-label="Toggle display density"><span class="view-toggle-dot active"></span><span class="view-toggle-dot"></span></button></div>
+          <div class="toolbar">
+            <div class="filter-tabs" role="tablist" aria-label="Report type">
+              <button class="filter-tab selected" data-kind="all">All items <span id="all-count">0</span></button>
+              <button class="filter-tab" data-kind="lost">Lost</button>
+              <button class="filter-tab" data-kind="found">Found</button>
+            </div>
+            <div class="toolbar-tools"><label class="search-box"><svg><use href="#i-search"/></svg><input id="search-input" type="search" placeholder="Search the board" aria-label="Search reports"><kbd>/</kbd></label><select class="sort-select" id="category-filter" aria-label="Filter category"><option value="all">All categories</option><option>Electronics</option><option>Bottles & cups</option><option>Books & stationery</option><option>Cards & documents</option><option>Clothing & accessories</option><option>Keys</option><option>Other</option></select></div>
+          </div>
+          <div class="feed-layout"><div class="report-list" id="report-list" aria-live="polite"></div><aside class="right-rail">
+            <div class="match-panel"><div class="panel-header"><span class="panel-icon"><svg><use href="#i-spark"/></svg></span><span class="panel-tag">SMART MATCH</span><span class="panel-live"><i></i></span></div><h3>A detail could<br>change everything.</h3><p>Our matching engine compares names, categories, places and dates to surface likely reunions.</p><button class="match-cta" id="matches-cta">See potential matches <svg><use href="#i-arrow"/></svg></button><div class="match-orbit orbit-one"></div><div class="match-orbit orbit-two"></div></div>
+            <div class="tips-panel"><div class="tips-heading"><span class="tips-mark">01</span><div><strong>A useful clue</strong><span>FOR A FASTER RETURN</span></div></div><p>Describe a sticker, scratch, initials or other detail only the owner would know.</p><a href="#" id="report-tip">Add a report <svg><use href="#i-arrow"/></svg></a></div>
+          </aside></div>
+          <div class="empty-state hidden" id="empty-state"><span class="empty-icon"><svg><use href="#i-search"/></svg></span><h3>Nothing on this page yet.</h3><p>Try a different search or add the first report.</p><button id="empty-report">Report an item <svg><use href="#i-arrow"/></svg></button></div>
+        </section>
+        <section class="admin-page hidden" id="admin-page"></section>
+      </div>
+      <footer class="page-footer"><span>Campus Found <span class="footer-sep">/</span> A little more found, a little less lost.</span><span>Made for the North Campus community <span class="footer-star">✳</span></span></footer>
+    </main>
+  </div>
+  <div class="modal-backdrop hidden" id="modal-backdrop"><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title"><button class="dialog-close" id="dialog-close" aria-label="Close dialog"><svg><use href="#i-close"/></svg></button><div id="dialog-content"></div></section></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
